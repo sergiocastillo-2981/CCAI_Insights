@@ -14,7 +14,7 @@ datagroup: insights_default_datagroup {
 persist_with: insights_default_datagroup
 
 explore: insights_data {
-  label: "CCAI Insights"
+  label: "CCAI Insights Demo"
   join: insights_data__words {
     view_label: "4: Words"
     sql: LEFT JOIN UNNEST(${insights_data.words}) as insights_data__words ;;
