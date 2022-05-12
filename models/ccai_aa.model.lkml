@@ -3,9 +3,16 @@ connection: "ee-power-bot"
 label: "Contact Center AI Demo"
 
 # include all the views
-include: "/views/**/*.view"
+#include: "/views/**/*.view"
 # include all the dashboards
-include: "../*.dashboard"
+#include: "../*.dashboard"
+
+#Views
+include: "/views/aa_feedback.view.lkml"    # include only required views
+include: "/views/next_sentences.view.lkml"    # include only required views
+
+#Dashboards
+include: "/agent_assist_metrics.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
 datagroup: gc_ccai_default_datagroup {
   max_cache_age: "1 hour"
