@@ -2,15 +2,30 @@ view: insights_data {
   sql_table_name: block_ccai_insights.looker_dataset;;
   view_label: "1: Conversations"
 
+ #pending to fix link
+
   dimension: agent_id {
     type: string
     description: "The user-provided identifier for the human agent who handled the conversation."
     sql: ${TABLE}.agentId ;;
-    link: {
-      label: "Agent Performance Dashboard"
-      url: "/dashboards-next/insights_demo::agent_performance?Agent+ID={{ value}}&Import+Date={{ _filters['insights_data.load_date'] | url_encode }}&Start+Date={{ _filters['insights_data.start_date'] | url_encode }}&Type={{ _filters['insights_data.type'] | url_encode }}&Client+Sentiment+Category={{ _filters['insights_data.client_sentiment_category'] | url_encode }}"
-    }
+    #link: {
+    #  label: "Agent Performance Dashboard"
+    #  url: "/dashboards-next/insights_demo::agent_performance?Agent+ID={{ value}}&Import+Date={{ _filters['insights_data.load_date'] | url_encode }}&Start+Date={{ _filters['insights_data.start_date'] | url_encode }}&Type={{ _filters['insights_data.type'] | url_encode }}&Client+Sentiment+Category={{ _filters['insights_data.client_sentiment_category'] | url_encode }}"
+    #}
   }
+
+  #pending to fix link
+  dimension: conversation_name {
+    type: string
+    primary_key: yes
+    description: "Name of the conversation resource."
+    sql: ${TABLE}.conversationName ;;
+    ##link: {
+    ##  label: "Conversation Lookup Dashboard"
+    ##  url: "/dashboards-next/insights_demo::conversation_lookup?Conversation+Name={{ value}}"
+    ##}
+  }
+
 
   dimension: agent_sentiment_magnitude {
     group_label: "Sentiment"
@@ -65,16 +80,7 @@ view: insights_data {
     value_format_name: percent_2
   }
 
-  dimension: conversation_name {
-    type: string
-    primary_key: yes
-    description: "Name of the conversation resource."
-    sql: ${TABLE}.conversationName ;;
-    link: {
-      label: "Conversation Lookup Dashboard"
-      url: "/dashboards-next/insights_demo::conversation_lookup?Conversation+Name={{ value}}"
-    }
-  }
+
 
   dimension: day {
     group_label: "Dates"
