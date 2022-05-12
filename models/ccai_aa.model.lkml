@@ -1,6 +1,6 @@
 connection: "ee-power-bot"
 
-label: "Contact Center AI Demo"
+label: "CCAI Agent Assist Demo"
 
 # include all the views
 #include: "/views/**/*.view"

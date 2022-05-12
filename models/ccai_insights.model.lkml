@@ -1,10 +1,15 @@
 connection: "ee-power-bot"
 
-#include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
-include: "/views/insights_data.view.lkml"    # include only required views
- include: "/agent_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+label: "CCAI Insights Demo"
 
+#include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 #include: "/dashboards/*.dashboard.lookml" # Include All Dashboards
+
+#Views
+include: "/views/insights_data.view.lkml"    # include only required views
+#Dashboards
+include: "/agent_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+
 
 datagroup: insights_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
