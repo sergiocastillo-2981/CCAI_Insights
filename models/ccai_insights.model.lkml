@@ -2,7 +2,7 @@ connection: "ee-power-bot"
 
 #include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 include: "/views/insights_data.view.lkml"    # include only required views
-# include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+ include: "/agent_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
 #include: "/dashboards/*.dashboard.lookml" # Include All Dashboards
 
