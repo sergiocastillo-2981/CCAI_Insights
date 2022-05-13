@@ -10,6 +10,7 @@ include: "/views/insights_data.view.lkml"    # include only required views
 #Dashboards
 include: "/agent_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 include: "/call_center_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+include: "/conversation_lookup.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
 
 datagroup: insights_default_datagroup {
