@@ -1,6 +1,6 @@
 view: aa_feedback {
   #sql_table_name: `@{DATASET}.@{TABLE_NAME}`;;
-  sql_table_name:block_ccai_insights.looker_dataset ;;
+  sql_table_name:block_ccai_insights_us1.looker_dataset ;;
 
 
   dimension_group: _partitiondate {

@@ -1,5 +1,5 @@
 view: insights_data {
-  sql_table_name: block_ccai_insights.looker_dataset;;
+  sql_table_name: block_ccai_insights_us1.looker_dataset;;
   view_label: "1: Conversations"
 
  #pending to fix link

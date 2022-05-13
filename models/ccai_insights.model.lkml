@@ -2,15 +2,15 @@ connection: "ee-power-bot"
 
 label: "CCAI Insights Demo"
 
-#include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
-#include: "/dashboards/*.dashboard.lookml" # Include All Dashboards
+#include: "/views/*.view.lkml"                          # include all views in the views/ folder in this project
+#include: "/dashboards/*.dashboard.lookml"              # Include All Dashboards
 
 #Views
-include: "/views/insights_data.view.lkml"    # include only required views
+include: "/views/insights_data.view.lkml"               # include only required views
 #Dashboards
-include: "/agent_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
-include: "/call_center_performance.dashboard.lookml"   # include a LookML dashboard called my_dashboard
-include: "/conversation_lookup.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+include: "/agent_performance.dashboard.lookml"          # including LookML dashboard called agent_performance
+include: "/call_center_performance.dashboard.lookml"    # including LookML dashboard called call_center_performance
+include: "/conversation_lookup.dashboard.lookml"        # including LookML dashboard called conversation_lookup
 
 
 datagroup: insights_default_datagroup {

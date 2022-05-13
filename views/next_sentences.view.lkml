@@ -6,7 +6,7 @@ view: next_sentences {
         OVER (PARTITION BY conversationName ORDER BY sentences.createTimeNanos) as next_participant_role,
         LEAD(sentences.sentence)
         OVER (PARTITION BY conversationName ORDER BY sentences.createTimeNanos) as next_sentence_text,
-      FROM block_ccai_insights.looker_dataset, UNNEST(sentences) as sentences
+      FROM block_ccai_insights_us1.looker_dataset, UNNEST(sentences) as sentences
        ;;
   }
 

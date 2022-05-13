@@ -8,11 +8,11 @@ label: "CCAI Agent Assist Demo"
 #include: "../*.dashboard"
 
 #Views
-include: "/views/aa_feedback.view.lkml"    # include only required views
-include: "/views/next_sentences.view.lkml"    # include only required views
+include: "/views/aa_feedback.view.lkml"             # Including only required views
+include: "/views/next_sentences.view.lkml"          # Including only required views
 
 #Dashboards
-include: "/agent_assist_metrics.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+include: "/agent_assist_metrics.dashboard.lookml"   # Including LookML dashboard called agent_assist_metrics
 
 datagroup: gc_ccai_default_datagroup {
   max_cache_age: "1 hour"

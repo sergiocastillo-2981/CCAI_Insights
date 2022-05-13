@@ -1,5 +1,5 @@
 view: looker_dataset {
-  sql_table_name: `block_ccai_insights.looker_dataset`
+  sql_table_name: `block_ccai_insights_us1.looker_dataset`
     ;;
 
   dimension: agent_id {
