@@ -1029,7 +1029,7 @@ view: sentence_turn_number {
           insights_data__sentences.sentence  AS sentence,
               insights_data__sentences.createTimeNanos AS created_test,
               rank() over(partition by insights_data.conversationName order by insights_data__sentences.createTimeNanos asc) AS turn_number
-          FROM block_ccai_insights.looker_dataset AS insights_data
+          FROM block_ccai_insights_us1.looker_dataset AS insights_data
           LEFT JOIN UNNEST(insights_data.sentences) as insights_data__sentences
           GROUP BY
           1,
@@ -1069,7 +1069,7 @@ view: human_agent_turns {
           insights_data__sentences.sentence  AS sentence,
           insights_data__sentences.createTimeNanos AS created_test,
           rank() over(partition by insights_data.conversationName order by insights_data__sentences.createTimeNanos asc) AS turn_number
-          FROM block_ccai_insights.looker_dataset AS insights_data
+          FROM block_ccai_insights_us1.looker_dataset AS insights_data
           LEFT JOIN UNNEST(insights_data.sentences) as insights_data__sentences
           GROUP BY
           1,
@@ -1078,7 +1078,7 @@ view: human_agent_turns {
       SELECT
           insights_data.conversationName  AS conversation_name,
           min(sentence_turn_number.turn_number) AS first_turn_human_agent
-      FROM block_ccai_insights.looker_dataset AS insights_data
+      FROM block_ccai_insights_us1.looker_dataset AS insights_data
       LEFT JOIN UNNEST(insights_data.sentences) as insights_data__sentences
       LEFT JOIN sentence_turn_number ON insights_data.conversationName=sentence_turn_number.conversation_name
           and insights_data__sentences.sentence = sentence_turn_number.sentence
