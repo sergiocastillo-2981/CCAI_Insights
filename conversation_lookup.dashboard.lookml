@@ -1,5 +1,5 @@
 - dashboard: conversation_lookup
-  title: Conversation Lookup
+  title: Conversation Lookup Demo
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
