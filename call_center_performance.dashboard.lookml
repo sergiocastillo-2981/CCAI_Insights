@@ -37,7 +37,7 @@
     height: 2
   - title: Avg Conv Length (min)
     name: Avg Conv Length (min)
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.average_conversation_minutes]
@@ -65,7 +65,7 @@
     height: 2
   - title: Average Turn Count
     name: Average Turn Count
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.average_turn_count]
@@ -93,7 +93,7 @@
     height: 2
   - title: Smart Highlights by Call Status
     name: Smart Highlights by Call Status
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_donut_multiples
     fields: [insights_data.conversation_count, insights_data__sentences__intent_match_data.display_name,
@@ -146,7 +146,7 @@
     height: 8
   - title: Negative Conv % of Total
     name: Negative Conv % of Total
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.bad_sentiment_ratio]
@@ -187,7 +187,7 @@
     height: 2
   - title: Avg Turn When Transfer Occurred
     name: Avg Turn When Transfer Occurred
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [human_agent_turns.average_first_turn_human_agent]
@@ -215,7 +215,7 @@
     height: 3
   - title: Time of Day When Transfers Occur
     name: Time of Day When Transfers Occur
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_column
     fields: [insights_data.load_hour_of_day, insights_data.conversation_count, insights_data.client_sentiment_category]
@@ -287,7 +287,7 @@
     height: 3
   - title: Total Transferred Conversations
     name: Total Transferred Conversations
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.conversation_count]
@@ -338,7 +338,7 @@
     height: 2
   - title: Popular Entities
     name: Popular Entities
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_wordcloud
     fields: [insights_data.conversation_count, insights_data__entities.name]
@@ -387,7 +387,7 @@
     height: 8
   - title: Client Sentiment by Day of Week
     name: Client Sentiment by Day of Week
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_column
     fields: [insights_data.conversation_count, insights_data.load_day_of_week, insights_data.client_sentiment_category]
@@ -455,7 +455,7 @@
     height: 3
   - title: Top 10 Topics
     name: Top 10 Topics
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_bar
     fields: [insights_data.conversation_count, insights_data__topics.name]
@@ -532,7 +532,7 @@
     height: 2
   - title: Conversations Imported and Analyzed
     name: Conversations Imported and Analyzed
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_column
     fields: [insights_data.conversation_count, insights_data.load_date, insights_data.type]
@@ -595,7 +595,7 @@
     height: 6
   - title: Avg Client Sent Score
     name: Avg Client Sent Score
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.average_client_sentiment_score]
@@ -632,7 +632,7 @@
     height: 3
   - title: Avg Agent Sent Score
     name: Avg Agent Sent Score
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.average_agent_sentiment_score]
@@ -669,7 +669,7 @@
     height: 3
   - title: Phrase Match When Transferred to Human Agent
     name: Phrase Match When Transferred to Human Agent
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_grid
     fields: [insights_data__sentences__phrase_match_data.display_name, insights_data.conversation_count,
@@ -744,7 +744,7 @@
     height: 6
   - title: Total Contained Conversations
     name: Total Contained Conversations
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.contained_count]
@@ -790,7 +790,7 @@
     height: 2
   - title: Client Sentiment Makeup
     name: Client Sentiment Makeup
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_area
     fields: [insights_data.conversation_count, insights_data.client_sentiment_category,
@@ -849,7 +849,7 @@
     height: 6
   - title: Avg Daily Conversations
     name: Avg Daily Conversations
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [daily_facts.avg_daily_conversations]
@@ -877,7 +877,7 @@
     height: 2
   - title: Avg Daily Contained Conversations
     name: Avg Daily Contained Conversations
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [daily_facts.avg_daily_contained_conversations]
@@ -923,7 +923,7 @@
     height: 2
   - title: Positive Conv % of Total
     name: Positive Conv % of Total
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: single_value
     fields: [insights_data.good_sentiment_ratio]
@@ -974,7 +974,7 @@
     height: 2
   - title: Agents Handling Long Conversations
     name: Agents Handling Long Conversations
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_grid
     fields: [insights_data.average_conversation_minutes, insights_data.agent_id, insights_data.conversation_count]
@@ -1009,7 +1009,7 @@
     height: 12
   - title: Agents With Low Average Client Sentiment
     name: Agents With Low Average Client Sentiment
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_grid
     fields: [insights_data.agent_id, insights_data.average_client_sentiment_category_value,
@@ -1046,7 +1046,7 @@
     height: 12
   - title: Intents and Highlights Identified for Long Conversations
     name: Intents and Highlights Identified for Long Conversations
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_grid
     fields: [insights_data__sentences__intent_match_data.display_name, insights_data__sentences__phrase_match_data.display_name,
@@ -1107,7 +1107,7 @@
     height: 12
   - title: Custom Highlights by Call Status
     name: Custom Highlights by Call Status
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     type: looker_donut_multiples
     fields: [insights_data.conversation_count, insights_data.status, insights_data__sentences__phrase_match_data.display_name]
@@ -1168,7 +1168,7 @@
       type: button_group
       display: inline
       options: []
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     listens_to_filters: []
     field: insights_data.type
@@ -1182,7 +1182,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     listens_to_filters: []
     field: insights_data.load_date
@@ -1196,7 +1196,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     listens_to_filters: []
     field: insights_data.start_date
@@ -1210,7 +1210,7 @@
       type: button_group
       display: inline
       options: []
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     listens_to_filters: []
     field: insights_data.status
@@ -1224,7 +1224,7 @@
       type: checkboxes
       display: popover
       options: []
-    model: insights_demo
+    model: ccai_insights
     explore: insights_data
     listens_to_filters: []
     field: insights_data.client_sentiment_category
