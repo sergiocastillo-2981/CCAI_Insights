@@ -1,5 +1,5 @@
 - dashboard: call_center_performance
-  title: Call Center Performance
+  title: Call Center Performance Demo
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
